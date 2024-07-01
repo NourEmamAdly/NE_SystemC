@@ -33,13 +33,13 @@ virtual void write(T)= 0;
 
 
 /**************************************************************************************************************
- *                                        NOW WE WILL BUILD THE FIFO channel                                  *     
- *                   WE DRIVE A CHANNEL FROM THE FIFO INTERFACE WE CREATED AND IMPLEMENT THE VIRTUAL FUNTION  * 
+ *                                        NOW WE WILL BUILD THE Signal channel                                *     
+ *                 WE DRIVE A CHANNEL FROM THE signal INTERFACE WE CREATED AND IMPLEMENT THE VIRTUAL FUNTION  * 
  * ************************************************************************************************************/
 
 template <class T>
 //creating a signal channel that drives from the signal interface and also we want to be able to add to our signal sinsitivity list
-// so we drive als from SC primitive channel THAT WILL MAKE USE THE SENSITIVITY LIST AS THE SC_SIGNAL CHANNEL
+// thats why we drive also from SC primitive channel THAT WILL MAKE USE THE SENSITIVITY LIST AS THE SC_SIGNAL CHANNEL
 class Signal : public SignalInterface <T>,public sc_prim_channel
 {
 
@@ -53,7 +53,7 @@ T newValue;
 sc_event valuechangedEvent;
 
 
-//defining cONSTRUCTOR
+//defining Signal Channel cONSTRUCTOR
 Signal()
 {
 currentValue= 0;
@@ -61,8 +61,8 @@ newValue = 0;
 }
 
 
-//implementing virtual functions of the signal for read and write
-T read()
+//implementing virtual functions of the signal Interface in the Signal Channel for read and write
+T read()  // Read VF implementation
 {
 
     return currentValue;
@@ -74,7 +74,7 @@ T read()
 // 2- you have to implement the update function
 // 3- you have to build the default event 
 //val is the value you want to write to the signal
-void write(T val)
+void write(T val) // Write VF Implementation
 {
 newValue= val;
 //we check if the new value and the current value is not same so we call the kernel and inform it that there is an update our signal changes
