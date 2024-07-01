@@ -5,7 +5,9 @@
 
 #include "place.h"
 using namespace std;
-
+/****************************************************************************************************************************************
+ *                        Updating transition module to have an array of input and output ports                                          *
+ ****************************************************************************************************************************************/
 // Transition:
 
 //In order to have more than one port for in and out we template the transistion module as follows to support multiple input ports
@@ -61,12 +63,6 @@ else{
             cout << this->name() << ": NOT Fired" << endl;
         }
     }
-
-};
-
-
-
-
 
 };
 
