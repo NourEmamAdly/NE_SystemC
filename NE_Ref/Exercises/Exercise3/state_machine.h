@@ -20,7 +20,7 @@ enum base {Start, G, GA,GAA, GAAG};
  
 // Define standard SC Signal that shows the current state value inside the state machine
 sc_signal<base> currentState;
-
+//defining 2 variables one to count the appearance and the other is counter for times
 unsigned int app=0;
 unsigned int cnt=0;
  //defining the state machine constructor
