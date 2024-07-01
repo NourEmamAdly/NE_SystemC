@@ -30,21 +30,27 @@
  * Authors:
  *     - Matthias Jung
  */
-
+/*************************************************************************************************************************************************************
+*                                                              Creating An Adder Module Project                                                              *
+**************************************************************************************************************************************************************/
 #include <systemc.h>
 #include <iostream>
 
 
-/*class adder : public sc_module {                                   SC_MODULE(adder){
+/*****************************************************************************************************
+NOTE:
+
+class adder : public sc_module {                                   SC_MODULE(adder){
 
 
 
-};                                                  =              }; */  
+};                                                  =              }; 
+******************************************************************************************************/  
 
 SC_MODULE(adder)
 {
 
-//defining input and output signals (Input and output ports)
+// 1- defining input and output signals (Input and output ports)
 sc_in<int> a;
 sc_in<int> b;
 sc_out<int> c;
@@ -54,7 +60,7 @@ its a variable not signal
 int nour;
 
 */
-//defining a process
+// 2- defining a process
 void compute()
 {
 //c=a+b; --> when you deal with variables not signals
@@ -62,7 +68,7 @@ c.write(a.read()+b.read()); //thats we write to o/p c the adding of a and b
 
 }
 
-// Defining Class constructor it has same name as class
+// 3- Defining Class constructor it has same name as class
 // it will be called when an object of this class created
 
 SC_CTOR(adder)
