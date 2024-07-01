@@ -46,7 +46,7 @@ class exampleInitiator: sc_module, tlm::tlm_bw_transport_if<>
         iSocket.bind(*this);
         SC_THREAD(process);
     }
-
+/*=================================================================================================================================================================*/
     // Dummy method:
     void invalidate_direct_mem_ptr(sc_dt::uint64 start_range,
                                    sc_dt::uint64 end_range)
@@ -63,7 +63,7 @@ class exampleInitiator: sc_module, tlm::tlm_bw_transport_if<>
         SC_REPORT_FATAL(this->name(),"nb_transport_bw is not implemented");
         return tlm::TLM_ACCEPTED;
     }
-
+/*=================================================================================================================================================================*/
     private:
     void process()
     {
@@ -188,7 +188,7 @@ class exampleTarget : sc_module, tlm::tlm_fw_transport_if<>
 
         trans.set_response_status( tlm::TLM_OK_RESPONSE );
     }
-
+/*=================================================================================================================================================================*/
     // Dummy method
     virtual tlm::tlm_sync_enum nb_transport_fw(
             tlm::tlm_generic_payload& trans,
@@ -213,41 +213,47 @@ class exampleTarget : sc_module, tlm::tlm_fw_transport_if<>
         SC_REPORT_FATAL(this->name(),"transport_dbg is not implemented");
         return 0;
     }
-
+/*=================================================================================================================================================================*/
 };
 
+/********************************************************************************************************************************************************************
+*                                            Implementing the Interconnect module and how it handles data betweeen the initiator and the target                     *
+/********************************************************************************************************************************************************************/
+// we have to drive the interconnect from both interfaces backward and forward interfaces
 class exampleInterconnect : sc_module,
                             tlm::tlm_bw_transport_if<>,
                             tlm::tlm_fw_transport_if<>
 {
     public:
+//defining 2 initiator sockets of the block interconnect and the target socket
     tlm::tlm_initiator_socket<> iSocket[2];
     tlm::tlm_target_socket<> tSocket;
 
     SC_CTOR(exampleInterconnect)
     {
+        we bind the sockets to the module itself
         tSocket.bind(*this);
         iSocket[0].bind(*this);
         iSocket[1].bind(*this);
     }
-
+// Implementing the b transport of the interconnect module
     void b_transport(tlm::tlm_generic_payload &trans, sc_time &delay)
     {
         // Annotate Bus Delay
         delay = delay + sc_time(40, SC_NS);
-
-        if(trans.get_address() < 512)
+       // lets we assume that we have global address map for the targets so implement the routing algorithm and global map
+        if(trans.get_address() < 512)  // Target 1 Addresses
         {
             iSocket[0]->b_transport(trans, delay);
         }
         else
         {
-            // Correct Address:
+            // Correct Address: // Target 2 Addresses
             trans.set_address(trans.get_address() - 512);
             iSocket[1]->b_transport(trans, delay);
         }
     }
-
+/*=================================================================================================================================================================*/
     // Dummy method
     virtual tlm::tlm_sync_enum nb_transport_fw(
             tlm::tlm_generic_payload& trans,
@@ -289,6 +295,7 @@ class exampleInterconnect : sc_module,
         SC_REPORT_FATAL(this->name(),"nb_transport_bw is not implemented");
         return tlm::TLM_ACCEPTED;
     }
+/*=================================================================================================================================================================*/
 
 };
 
