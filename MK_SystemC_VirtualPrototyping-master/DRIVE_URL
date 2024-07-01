@@ -1,0 +1,56 @@
+https://drive.google.com/drive/folders/1pYd7szuvy6e5qhtLdrz7LiVCJn4dFL0W?usp=sharing
+
+
+
+Points Covered in each Exercise:
+
+Exercise 2:
+- Implementation of a nand gate module
+- Using nand gates to create an xor (Hierarchical Binding)
+- Understanding given stimulus and monitor files
+- Debugging using GTKWave
+- Adding sc_clock
+Exercise 3:
+- State machine implementation using switch cases on Regex Expression.
+Exercise 4:
+- Petri Net implementation using custom interfaces, templated ports, multiports and channels.
+Exercise 5:
+- Kahn Process Network implementation using sc_fifo<T>
+Exercise 6:
+- TLM Loosely Timed: Single Initiator/ Target, Multiple Initiator/ Target, Temporal Decoupling
+
+Hard Points Covered in Lectures:
+
+Lecture 2:
+- Binding (Connecting) Modules > P. 58, 59
+
+Lecture 3:
+- Ports, Signals, Interfaces and Channels > P. 15 to 17 and 
+- Implement Custom Channel > Code in L3_SC_advance/0.Done/custom_fifo > also sc has a sc_fifo<T> see Primitive Channels below
+- Primitive Channels sc_signal/buffer/fifo/mutex/semaphore > P.25 to 30. 
+    -IN FIFO: CHECK SLIDES FOR NON-BLOCKING AND BLOCKING WRITE/READ
+- Ports, Port Arrays, Multiports > P.37 to 
+- Other topics: custom Signal, event finders, dynamic processes, report handling, callbacks
+
+Lecture 4:
+- Started with a simple custom tlm implementation.
+- Blocking Loosely Timed Initator and target > code: tlm_lt_initiator_target. Unlike the custom, this is standard complient.
+- Building an interconnect component to blocking LT Init/target > code: tlm_lt_initiator_interconnect_target
+- Temporal decoupling > tlm_quantum_keeper
+- Direct Memory Interface > tlm_lt_dmi
+- Debug transport
+
+
+OTHER:
+
+SC_Clock:
+    sc_clock clk1("clk1", 1, SC_NS, 0.5, 0, SC_NS, true);
+    /*
+    sc_clock(const char* name_, const sc_time& period_, double duty_cycle_ = 0.5, const sc_time& start_time_ = SC_ZERO_TIME, bool posedge_first_ = true );
+    */
+    // MK_GPT: Defines a SystemC clock named 'clk1' with a period of 1 nanosecond (1, SC_NS) and a duty cycle of 50% (0.5).
+    // MK_GPT: The clock is initially set to 0 nanoseconds (0), and it has a phase shift of 0 nanoseconds (0, SC_NS).
+    // MK_GPT: The last argument 'true' indicates that the clock starts with a rising edge.
+    
+    
+    

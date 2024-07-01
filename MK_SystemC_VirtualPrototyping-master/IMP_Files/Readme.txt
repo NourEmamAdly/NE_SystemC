@@ -1,0 +1,3 @@
+- To run the cmake_process.sh use the command "source cmake_process.sh" (to automate the build process)
+- Then call the code you want to execute twice: "mk_ex/mk_ex"
+- To rereun, need to go one step back first using cd ..

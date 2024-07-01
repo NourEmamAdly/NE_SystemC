@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/exor_main.dir/exor_main.cpp.o -o exor_main   -L/usr/local/systemc/lib-linux64  -Wl,-rpath,/usr/local/systemc/lib-linux64 -lsystemc 

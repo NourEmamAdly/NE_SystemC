@@ -1,0 +1,8 @@
+[
+{
+  "directory": "/home/nouremam/WorkSpace/03-CustomSignal/build",
+  "command": "/usr/bin/c++  -I/usr/local/systemc/include -I/home/nouremam/WorkSpace/03-CustomSignal/include -g -std=gnu++17 -o CMakeFiles/main.dir/main.cpp.o -c /home/nouremam/WorkSpace/03-CustomSignal/main.cpp",
+  "file": "/home/nouremam/WorkSpace/03-CustomSignal/main.cpp",
+  "output": "CMakeFiles/main.dir/main.cpp.o"
+}
+]

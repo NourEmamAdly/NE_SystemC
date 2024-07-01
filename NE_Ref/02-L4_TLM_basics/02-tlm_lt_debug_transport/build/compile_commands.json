@@ -1,0 +1,8 @@
+[
+{
+  "directory": "/home/nouremam/WorkSpace/02-L4_TLM_basics/02-tlm_lt_debug_transport/build",
+  "command": "/usr/bin/c++  -I/usr/local/systemc/include -g -std=gnu++17 -o CMakeFiles/main.dir/main.cpp.o -c /home/nouremam/WorkSpace/02-L4_TLM_basics/02-tlm_lt_debug_transport/main.cpp",
+  "file": "/home/nouremam/WorkSpace/02-L4_TLM_basics/02-tlm_lt_debug_transport/main.cpp",
+  "output": "CMakeFiles/main.dir/main.cpp.o"
+}
+]

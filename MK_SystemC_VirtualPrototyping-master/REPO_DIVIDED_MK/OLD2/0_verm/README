@@ -1,0 +1,47 @@
+Points Covered in each Exercise:
+
+Exercise 1:
+- 
+- 
+- 
+Exercise 2:
+- 
+- 
+- 
+
+
+Hard Points Covered in Lectures:
+
+Lecture 2:
+- Binding (Connecting) Modules > P. 58, 59
+
+Lecture 3:
+- Ports, Signals, Interfaces and Channels > P. 15 to 17 and 
+- Implement Custom Channel > Code in L3_SC_advance/0.Done/custom_fifo > also sc has a sc_fifo<T> see Primitive Channels below
+- Primitive Channels sc_signal/buffer/fifo/mutex/semaphore > P.25 to 30. 
+    -IN FIFO: CHECK SLIDES FOR NON-BLOCKING AND BLOCKING WRITE/READ
+- Ports, Port Arrays, Multiports > P.37 to 
+- Other topics: custom Signal, event finders, dynamic processes, report handling, callbacks
+
+Lecture 4:
+- Started with a simple custom tlm implementation.
+- Blocking Loosely Timed Initator and target > code: tlm_lt_initiator_target. Unlike the custom, this is standard complient.
+- Building an interconnect component to blocking LT Init/target > code: tlm_lt_initiator_interconnect_target
+- Temporal decoupling > tlm_quantum_keeper
+- Direct Memory Interface > tlm_lt_dmi
+- Debug transport
+
+
+OTHER:
+
+SC_Clock:
+    sc_clock clk1("clk1", 1, SC_NS, 0.5, 0, SC_NS, true);
+    /*
+    sc_clock(const char* name_, const sc_time& period_, double duty_cycle_ = 0.5, const sc_time& start_time_ = SC_ZERO_TIME, bool posedge_first_ = true );
+    */
+    // MK_GPT: Defines a SystemC clock named 'clk1' with a period of 1 nanosecond (1, SC_NS) and a duty cycle of 50% (0.5).
+    // MK_GPT: The clock is initially set to 0 nanoseconds (0), and it has a phase shift of 0 nanoseconds (0, SC_NS).
+    // MK_GPT: The last argument 'true' indicates that the clock starts with a rising edge.
+    
+    
+    

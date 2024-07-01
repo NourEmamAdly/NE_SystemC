@@ -1,0 +1,1 @@
+/usr/bin/c++ -g CMakeFiles/state_machine.dir/state_machine.cpp.o CMakeFiles/state_machine.dir/stimuli.cpp.o CMakeFiles/state_machine.dir/main.cpp.o -o state_machine   -L/usr/local/systemc/lib-linux64  -Wl,-rpath,/usr/local/systemc/lib-linux64 -lsystemc 

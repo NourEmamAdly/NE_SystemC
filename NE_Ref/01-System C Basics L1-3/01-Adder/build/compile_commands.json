@@ -1,0 +1,8 @@
+[
+{
+  "directory": "/home/nouremam/WorkSpace/01-Adder/build",
+  "command": "/usr/bin/c++  -I/usr/local/systemc/include -g -std=gnu++17 -o CMakeFiles/main.dir/main.cpp.o -c /home/nouremam/WorkSpace/01-Adder/main.cpp",
+  "file": "/home/nouremam/WorkSpace/01-Adder/main.cpp",
+  "output": "CMakeFiles/main.dir/main.cpp.o"
+}
+]

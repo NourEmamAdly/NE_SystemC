@@ -1,0 +1,20 @@
+[
+{
+  "directory": "/home/nouremam/WorkSpace/Exercises/Exercise3/build",
+  "command": "/usr/bin/c++  -I/usr/local/systemc/include -g -std=gnu++17 -o CMakeFiles/state_machine.dir/state_machine.cpp.o -c /home/nouremam/WorkSpace/Exercises/Exercise3/state_machine.cpp",
+  "file": "/home/nouremam/WorkSpace/Exercises/Exercise3/state_machine.cpp",
+  "output": "CMakeFiles/state_machine.dir/state_machine.cpp.o"
+},
+{
+  "directory": "/home/nouremam/WorkSpace/Exercises/Exercise3/build",
+  "command": "/usr/bin/c++  -I/usr/local/systemc/include -g -std=gnu++17 -o CMakeFiles/state_machine.dir/stimuli.cpp.o -c /home/nouremam/WorkSpace/Exercises/Exercise3/stimuli.cpp",
+  "file": "/home/nouremam/WorkSpace/Exercises/Exercise3/stimuli.cpp",
+  "output": "CMakeFiles/state_machine.dir/stimuli.cpp.o"
+},
+{
+  "directory": "/home/nouremam/WorkSpace/Exercises/Exercise3/build",
+  "command": "/usr/bin/c++  -I/usr/local/systemc/include -g -std=gnu++17 -o CMakeFiles/state_machine.dir/main.cpp.o -c /home/nouremam/WorkSpace/Exercises/Exercise3/main.cpp",
+  "file": "/home/nouremam/WorkSpace/Exercises/Exercise3/main.cpp",
+  "output": "CMakeFiles/state_machine.dir/main.cpp.o"
+}
+]

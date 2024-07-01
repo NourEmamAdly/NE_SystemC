@@ -1,0 +1,8 @@
+/home/mk-ubuntu-20-04/Documents/MK/SCVP/REPO_PreExam/SCVP.artifacts/build/CMakeFiles/rebuild_cache.dir
+/home/mk-ubuntu-20-04/Documents/MK/SCVP/REPO_PreExam/SCVP.artifacts/build/CMakeFiles/edit_cache.dir
+/home/mk-ubuntu-20-04/Documents/MK/SCVP/REPO_PreExam/SCVP.artifacts/build/a_mk_final_exercises/ex_6/CMakeFiles/rebuild_cache.dir
+/home/mk-ubuntu-20-04/Documents/MK/SCVP/REPO_PreExam/SCVP.artifacts/build/a_mk_final_exercises/ex_6/CMakeFiles/edit_cache.dir
+/home/mk-ubuntu-20-04/Documents/MK/SCVP/REPO_PreExam/SCVP.artifacts/build/a_mk_final_exercises/ex_6/CMakeFiles/ex_6.dir
+/home/mk-ubuntu-20-04/Documents/MK/SCVP/REPO_PreExam/SCVP.artifacts/build/L4_TLM_basics/tlm_quantum_keeper/CMakeFiles/rebuild_cache.dir
+/home/mk-ubuntu-20-04/Documents/MK/SCVP/REPO_PreExam/SCVP.artifacts/build/L4_TLM_basics/tlm_quantum_keeper/CMakeFiles/edit_cache.dir
+/home/mk-ubuntu-20-04/Documents/MK/SCVP/REPO_PreExam/SCVP.artifacts/build/L4_TLM_basics/tlm_quantum_keeper/CMakeFiles/tlm_quantum_keeper.dir

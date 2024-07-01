@@ -1,0 +1,1 @@
+/usr/bin/c++     CMakeFiles/ex_6.dir/main.cpp.o  -o ex_6  -Wl,-rpath,/opt/systemc/lib-linux64 /opt/systemc/lib-linux64/libsystemc.so 

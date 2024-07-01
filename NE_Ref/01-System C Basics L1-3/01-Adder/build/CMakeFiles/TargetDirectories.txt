@@ -1,0 +1,3 @@
+/home/nouremam/WorkSpace/01-Adder/build/CMakeFiles/main.dir
+/home/nouremam/WorkSpace/01-Adder/build/CMakeFiles/edit_cache.dir
+/home/nouremam/WorkSpace/01-Adder/build/CMakeFiles/rebuild_cache.dir
