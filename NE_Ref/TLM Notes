@@ -1,0 +1,23 @@
+you can check the TLM Examples in MK_REPO I added comments to it:
+---------------------------------------------------------------------
+1- TLM Initiator Target Example
+2- TLM Initiator Interconnect and Target Example --> its same code for the initiator and target just added the interconnect code
+3- TLM Quantum Keeper example --> you can see how its implemented in our code
+4- DMI Initiator check the example mentioned in page 57 in your slides. --> DMI Is used in Boot loading process.
+5- Transport debug is used for putting boot loader in your memory without simulating this so we use the Transpor depug
+    also its used if you want to check a value in your target in debugging, it has no simulation time --> check example in page 62 slides accessing values in target(debuging)
+
+Notes for Design:
+----------------------
+1- Derive interface and channels you need + Implement the virtual functions you have in the channel if you drive it frm the interface.
+2- Create modules that you need --> set attributes ,constructors, methods and processes
+3- bind the modules you create and the channels with ports if you have.
+4- connect ports ith signals with other ports of other modules.
+5- if you have an example with more than one channel and more than module make sure you bind everything correctly.
+
+TLM:
+-----
+1- Design the Initiator as mentioned in examples
+2- Design the Target as mentioned in examples
+3- Design the interconnect as mentioned in examples
+then in main function instentiate Initiators and Targets and interconnects then bind them together based on your design.
