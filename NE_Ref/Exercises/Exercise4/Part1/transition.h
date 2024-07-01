@@ -5,7 +5,7 @@
 
 #include "place.h"
 /****************************************************************************************************************************************
- *                        Implementing Transition module which consists  of two custom ports                                            *
+ *                    Implementing Transition module which consists of two custom ports connected to the our custom channel             *
  ****************************************************************************************************************************************/
 // Transition:
 SC_MODULE(transition)
