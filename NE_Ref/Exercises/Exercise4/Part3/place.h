@@ -17,7 +17,8 @@ virtual bool testTokens()=0;
 };
 
 
-// Place Channel:
+// Deriving Place Channel from place interface but this time it would be templated
+//Win denotes the input weight of the place chnnel and Wout is the output weight of the place channel
 template< unsigned int Win =1, unsigned int Wout = 1 >
 class place :public placeInterface
 {
@@ -32,6 +33,7 @@ place(unsigned int initial_tokens = 1): tokens(initial_tokens)
     //one way of implementation
 }
 
+//implementing the channel functions using the input and output weight of the channels
 void addTokens()
 {
     tokens+=Win;
