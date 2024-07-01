@@ -5,7 +5,7 @@
 
 // Place Interface:
 /****************************************************************************************************************************************
- *                        Implementing custom Place Interface and Place Channel and ports                                               *
+ *                        Implementing custom Place Interface and Place Channel                                                         *
  ****************************************************************************************************************************************/
 // Deriving the place interface from the SC Interface standrd
 class placeInterface : public sc_interface  // Creating Place Custom Interface
