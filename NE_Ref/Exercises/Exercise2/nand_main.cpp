@@ -1,11 +1,24 @@
 #include <systemc.h>
 #include "nand.h"
-
+/****************************************************************************************************************************************
+ *                                Implementing toplevel Module for Testing the NAND Gate Module We created                              *
+ ****************************************************************************************************************************************/
 SC_MODULE(toplevel)
 {
+private:
+    //instintiating the nand module here
+    nand n1;
+    unsigned int cnt;
+//defining the sc signals that will be connected to the nand gate input and outputs
+    sc_signal<bool> A;
+    sc_signal<bool> B;
+    sc_signal<bool> Z;
+
+    
 public:
     SC_CTOR(toplevel) : n1("n1"), cnt(0)
     {
+    // binding the nand gate module and the signals 
         n1.A.bind(A);
         n1.B.bind(B);
         n1.Z.bind(Z);
@@ -14,13 +27,7 @@ public:
         sensitive << A << B << Z;
     }
 
-private:
-    nand n1;
-    unsigned int cnt;
 
-    sc_signal<bool> A;
-    sc_signal<bool> B;
-    sc_signal<bool> Z;
 
     void process()
     {
