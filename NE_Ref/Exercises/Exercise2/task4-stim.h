@@ -2,11 +2,14 @@
 #define STIMULUS_H
 
 #include <systemc.h>
-
+/****************************************************************************************************************************************
+ *                           Implementing the Stim Module which is sensitive to clck change on positive edge                            *
+ ****************************************************************************************************************************************/
 SC_MODULE(stim)
 {
 public:
     sc_out<bool> A, B;
+//we define an input clck to the stim module that will make the module generate outputs to the exor inputs every pos clck edge
     sc_in<bool> clk;
     SC_CTOR(stim)
     {
